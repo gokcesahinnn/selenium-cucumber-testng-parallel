@@ -37,3 +37,9 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+### Allure ###
+allure-results/
+
+### Screenshots ###
+screenshots/
