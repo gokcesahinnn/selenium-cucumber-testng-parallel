@@ -32,10 +32,6 @@ public class LoginSteps {
     public void launchURL(String url) {
         driver.get(url);
         Assert.assertTrue(false);
-
-
-        System.out.println("sample change login feature user1 changes");
-
     }
 
     @Given("user has entered credentials")
@@ -62,7 +58,6 @@ public class LoginSteps {
     public void userVerifyDashboard(String text) {
         dashboard = new Dashboard(driver);
         Assert.assertTrue(dashboard.productsLabel.isDisplayed());
-        System.out.println("resolved issues of user2");
     }
 
     @And("user closes the browser")

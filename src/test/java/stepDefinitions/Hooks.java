@@ -23,7 +23,6 @@ public class Hooks {
 
     @Before()
     public void chromeSetUp(Scenario scenario) {
-        System.out.println("I am in chrome before scenario");
         String browser = BaseConfig.getInstance().getBrowser();
         Driver.getInstance().setDriver(browser);
         driver = Driver.getInstance().getDriver();
@@ -45,7 +44,6 @@ public class Hooks {
             saveScreenshot(screenshot, screenshotPath);
             Allure.addAttachment("Page Screenshot: ", FileUtils.openInputStream(screenshot));
         }
-        System.out.println("Scenario Status: " + scenario.getStatus());
         Driver.getInstance().getDriver().quit();
     }
 
@@ -68,12 +66,10 @@ public class Hooks {
 
     @BeforeStep()
     public void actionBeforeEachStep() {
-        System.out.println("I am in before step");
     }
 
 
     @AfterStep()
     public void actionPostEachStep() {
-        System.out.println("I am in After step");
     }
 }

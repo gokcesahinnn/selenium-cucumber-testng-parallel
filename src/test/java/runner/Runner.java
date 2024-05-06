@@ -18,23 +18,19 @@ public class Runner extends AbstractTestNGCucumberTests {
 
     @BeforeSuite
     public void beforeSuite() {
-        System.out.println("before execution of suite");
     }
 
     @AfterSuite
     public void afterSuite() {
-        System.out.println("in after suite");
     }
 
     @BeforeClass
     public void beforeClass(ITestContext context) {
-        System.out.println("before class");
         String threadCount = BaseConfig.getInstance().getThreadCount();
         context.getCurrentXmlTest().getSuite().setDataProviderThreadCount(Integer.parseInt(threadCount));
     }
 
     @AfterClass
     public void afterClass() {
-        System.out.println("after class");
     }
 }
