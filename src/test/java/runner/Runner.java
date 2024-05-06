@@ -7,7 +7,6 @@ import org.testng.annotations.*;
 
 @CucumberOptions(features = "src/test/resources",
         glue = {"stepDefinitions", "hooks"},
-        tags =("@testNG1"),
         plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:", "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm", "rerun:target/failed.txt"})
 public class Runner extends AbstractTestNGCucumberTests {
 
